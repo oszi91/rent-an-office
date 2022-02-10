@@ -1,0 +1,29 @@
+.arrow {
+	border: 1px solid $color7;
+	cursor: pointer;
+
+	i {
+		background: $color1;
+		width: 122px;
+		height: 93px;
+		line-height: 91px;
+		color: $color2;
+		text-align: center;
+		font-size: 42px;
+
+		background-size: 200% 100%;
+		background-image: linear-gradient(to left, $color2 50%, $color1 50%);
+		transition: background-position 0.3s ease-out;
+
+		&:hover {
+			background-position: -100% 0;
+			color: $color1;
+		}
+	}
+
+	&__left {
+		i {
+			background-image: linear-gradient(to right, $color1 50%, $color2 50%);
+		}
+	}
+}

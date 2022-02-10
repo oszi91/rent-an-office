@@ -1,0 +1,21 @@
+.button {
+	display: block;
+	text-align: center;
+	border: none;
+	width: 305px;
+	background: $color2;
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 41px;
+	letter-spacing: 3.6px;
+	color: $color1;
+	text-transform: uppercase;
+	background-size: 200% 100%;
+	background-image: linear-gradient(to left, $color4 50%, $color2 50%);
+	transition: background-position 0.3s ease-out;
+
+	&:hover {
+		background-position: -100% 0;
+		color: $color2;
+	}
+}

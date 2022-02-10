@@ -1,0 +1,44 @@
+.rentedOrOwnSection {
+	background: $color6;
+	padding-top: 200px;
+
+	.rentedOrOwn {
+		margin-left: 140px;
+		display: flex;
+		position: relative;
+		height: 511px;
+		width: 100%;
+
+		&__img{
+			margin-left: 127px;
+			height: 511px;
+		}
+
+		&__container {
+			z-index: 1;
+			h1 {
+				margin-top: 178px;
+				width: 388px;
+				font-size: 48px;
+				font-weight: bold;
+				line-height: 61px;
+				margin: 173px 0 135px;
+			}
+
+			hr {
+				display: block;
+				z-index: 1;
+				width: 489px;
+				border-top: 18px solid $color2;
+			}
+		}
+
+		&__decoration {
+			width: auto;
+			height: 116px;
+			position: absolute;
+			top: -60px;
+			right: 250px;
+		}
+	}
+}

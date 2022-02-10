@@ -1,0 +1,22 @@
+body {
+	font-family: $font-family;
+	overflow-x: hidden;
+}
+
+.container {
+	width: 100%;
+	max-width: 1254px;
+	margin: auto;
+}
+
+.containerFullWidth {
+	width: 100vw;
+	position: relative;
+	margin-left: -50vw;
+	left: 50%;
+}
+
+.flexCenter {
+	display: flex;
+	justify-content: center;
+}

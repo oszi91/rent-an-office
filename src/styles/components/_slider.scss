@@ -1,0 +1,61 @@
+.slide {
+	opacity: 0;
+	transition-duration: 1s ease;
+}
+
+.slide.active {
+	opacity: 1;
+	transition-duration: 1s;
+	transform: scale(1);
+}
+
+.slider {
+	display: flex;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&__container {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+	}
+
+	&__background {
+		height: 753px;
+		filter: brightness(0.63);
+	}
+}
+
+.progressBarContainer {
+	display: flex;
+	align-items: center;
+	color: $color1;
+	margin-left: 22px;
+
+	&__slideNum {
+		font-size: 13px;
+		font-weight: bold;
+	}
+
+	&__wrapper {
+		width: 166px;
+		margin: 0 17px;
+
+		&__progressBar{
+			width: 100%;
+			background-color: $color2;
+
+			&__fill{
+				display: block;
+				height: 5px;
+				background-color: $color1;
+				transition: width 500ms ease-in-out;
+			}
+		}
+	}
+}
