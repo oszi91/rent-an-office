@@ -2,6 +2,14 @@
 	position: relative;
 	height: 708px;
 	margin-bottom: 139px;
+
+	@include sm {
+		margin-bottom: calc(100vh - 630px);
+	}
+
+	@include md {
+		height: 550px;
+	}
 }
 
 .gallery {
@@ -12,25 +20,84 @@
 	cursor: pointer;
 	position: relative;
 
-	&__header {
-		position: absolute;
-		top: 0;
-		right: 139px;
-		display: flex;
-		flex-direction: column;
+	@include sm {
+		position: static;
+		height: 100vh;
+	}
 
-		h1 {
-			align-self: flex-end;
-			font-weight: bold;
-			font-size: 51px;
-			line-height: 75px;
-			margin-bottom: 29px;
-			letter-spacing: -2px;
+	@include md {
+		height: 550px;
+		position: static;
+	}
+
+	@include xl {
+		justify-content: center;
+	}
+
+	&__containerHeader {
+		position: absolute;
+		right: 0;
+		margin-right: max(0px, (100% - 1274px)/2);
+		padding-right: 10px;
+		padding-left: 10px;
+
+		@include sm {
+			top: -120px;
 		}
 
-		hr {
-			width: 358px;
-			border-top: 18px solid $color2;
+		@include md {
+			top: -120px;
+		}
+
+		@include lg {
+			background-color: rgba($color: $color1, $alpha: 0.5);
+			padding: 10px;
+			border-radius: 0 0 0 15px;
+		}
+
+		@include xl {
+			background-color: rgba($color: $color1, $alpha: 0.5);
+			padding: 10px;
+		}
+
+		&__header {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+
+			h1 {
+				font-weight: bold;
+				font-size: 51px;
+				line-height: 75px;
+				margin-bottom: 29px;
+				letter-spacing: -2px;
+
+				@include sm {
+					font-size: 40px;
+					line-height: 80px;
+					margin-bottom: 0;
+				}
+
+				@include md {
+					font-size: 45px;
+					margin-bottom: 0;
+				}
+			}
+
+			hr {
+				width: 358px;
+				border-top: 18px solid $color2;
+
+				@include sm {
+					width: 250px;
+					border-top: 10px solid $color2;
+				}
+
+				@include md {
+					width: 250px;
+					border-top: 12px solid $color2;
+				}
+			}
 		}
 	}
 
@@ -39,6 +106,14 @@
 
 		&__img {
 			height: 708px;
+
+			@include sm {
+				height: 100vh;
+			}
+
+			@include md {
+				height: 550px;
+			}
 		}
 	}
 
@@ -50,23 +125,56 @@
 
 		&__1 {
 			height: 436px;
+
+			@include sm {
+				height: 60vh;
+			}
+
+			@include md {
+				height: 60%;
+			}
 		}
 
 		&__2 {
 			height: calc(708px - 436px - 17px);
+
+			@include sm {
+				height: 40vh;
+			}
+
+			@include md {
+				height: 40%;
+			}
 		}
 	}
 
 	&__3 {
 		display: flex;
 		flex-direction: column;
-
 		gap: 17px;
 
-		div {
+		@include sm {
+			height: 100vh;
+		}
+		@include md {
+			height: 100%;
+		}
+
+		&__one {
 			align-self: flex-end;
-			&__1 {
-				height: calc(708px - 550px - 17px);
+
+			@include md {
+				align-self: flex-start;
+			}
+
+			&__img {
+				@include sm {
+					height: 30vh;
+				}
+
+				@include md {
+					height: 100%;
+				}
 			}
 		}
 
@@ -75,10 +183,24 @@
 
 			display: flex;
 			&__1 {
-				height: 550px;
+				@include sm {
+					height: 70vh;
+				}
+
+				@include md {
+					height: 70%;
+				}
 			}
 			&__2 {
 				height: 550px;
+
+				@include sm {
+					height: 70vh;
+				}
+
+				@include md {
+					height: 70%;
+				}
 			}
 		}
 	}
@@ -91,10 +213,30 @@
 		top: 50%;
 		left: 11px;
 
+		@include sm {
+			top: 50vh;
+		}
+
+		@include xl {
+			display: none;
+		}
+
 		i {
 			width: 104px;
 			height: 100px;
 			line-height: 100px;
+
+			@include sm {
+				width: 54px;
+				height: 50px;
+				line-height: 50px;
+			}
+
+			@include md {
+				width: 74px;
+				height: 70px;
+				line-height: 70px;
+			}
 		}
 	}
 

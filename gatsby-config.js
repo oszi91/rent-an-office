@@ -4,6 +4,7 @@ module.exports = {
 		description:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut auctor',
 	},
+
 	plugins: [
 		`gatsby-plugin-sass`,
 		`gatsby-plugin-react-helmet`,

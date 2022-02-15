@@ -23,21 +23,24 @@ const OfferWithPhotos = () => {
 			<OneOffer img={img1} header="Biuro" desc="od 1000 zł/msc" />
 			<OneOffer
 				img={img2}
-				header="Lorem ipsum Biuro"
+				header={`Lorem ipsum\n Biuro`}
 				desc="od 500 zł/msc"
 				type="rightTop"
+				classPosition="offer__item__container--topSmall"
 			/>
 			<OneOffer
 				img={img3}
-				header="Biuro lorem"
+				header={`Biuro lorem`}
 				desc="od 100 zł/msc"
 				type="leftBottom"
+				classPosition="offer__item__container--bottomSmall"
 			/>
 			<OneOffer
 				img={img4}
-				header="Biuro lorem ipsum Lorem"
-				desc="od 1000 zł/msc"
+				header={`Biuro lorem ipsum\n Lorem`}
+				desc="od 100 zł/h"
 				type="rightBottom"
+				classPosition="offer__item__container--bottomBig"
 			/>
 		</section>
 	);

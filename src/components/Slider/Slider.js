@@ -49,7 +49,10 @@ export default Slider;
 
 export const querySlider = graphql`
 	query {
-		allFile(filter: { relativeDirectory: { eq: "slider" } }) {
+		allFile(
+			filter: { relativeDirectory: { eq: "slider" } }
+			sort: { fields: name }
+		) {
 			edges {
 				node {
 					id

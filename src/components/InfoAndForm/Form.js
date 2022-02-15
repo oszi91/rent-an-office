@@ -1,10 +1,14 @@
 import React from 'react';
 
 import Button from '../Layout/Button';
+import Message from '../Layout/Message';
 
-const Form = () => {
+const Form = ({ isFormOpen, onClick }) => {
+	const isOpen = isFormOpen ? 'form form--isOpen' : 'form';
+
 	return (
-		<form className="form">
+		<form className={isOpen}>
+			<Message isFormOpen={isFormOpen} onClick={onClick} close={true} />
 			<h3 className="form__title">
 				Lorem ipsum
 				<br /> Lorem ipsum lorem ipsum

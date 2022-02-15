@@ -1,0 +1,35 @@
+.message {
+	display: none;
+
+	@include sm {
+		display: block;
+		position: fixed;
+		right: 5%;
+		bottom: 5%;
+		z-index: 2;
+
+		i {
+			background: $color1;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			color: $color2;
+			text-align: center;
+			box-shadow: $box-shadow-message;
+			border-radius: 10px;
+			font-size: 25px;
+		}
+
+		&--close {
+			top: 3%;
+			right: 3%;
+
+			i {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+			}
+		}
+	}
+}

@@ -4,7 +4,10 @@
 
 .footer__container {
 	display: flex;
-	margin-top: 44px;
+	margin-top: 42px;
+
+	@include md {
+	}
 }
 
 .footer {
@@ -23,24 +26,36 @@
 	&__contact {
 		display: flex;
 		flex-direction: column;
-		margin: 0 397px 0 0;
+		margin-right: 401px;
 
-		&__street{
-			margin-bottom: 5px;
+		@include md {
+			margin-right: 150px;
 		}
 
 		&__street,
 		&__city {
-			font: normal normal normal 11px Poppins;
+			font-size: 11px;
+			line-height: 21px;
+
+			@include xl {
+				font-size: 15px;
+				line-height: 26px;
+			}
 		}
 
 		&__phone {
-			margin-top: 26px;
+			margin-top: 20px;
 		}
 
 		&__phone,
 		&__email {
-			font: normal normal bold 12px Poppins;
+			font-size: 12px;
+			line-height: 20px;
+
+			@include xl {
+				font-size: 16px;
+				line-height: 26px;
+			}
 		}
 	}
 
@@ -49,12 +64,20 @@
 		flex-direction: column;
 		row-gap: 13px;
 
+		@include sm {
+			display: none;
+		}
+
 		&__item {
 			font: normal normal normal 12px Poppins;
+
+			@include xl {
+				font-size: 17px;
+			}
 		}
 
 		&__first {
-			margin-right: 153px;
+			margin-right: 154px;
 		}
 	}
 
@@ -66,6 +89,10 @@
 		justify-content: space-between;
 		align-items: center;
 		font-size: 9px;
+
+		@include xl {
+			font-size: 13px;
+		}
 
 		&__copyright {
 			display: flex;
@@ -86,7 +113,12 @@
 		z-index: 1;
 		position: absolute;
 		top: -26px;
-		right: -30px;
+		right: 0;
 		height: 55px;
+
+		@include sm {
+			top: -22px;
+			height: 44px;
+		}
 	}
 }

@@ -1,7 +1,17 @@
 .logo {
-	margin-right: 155px;
-	font-size: 37px;
+	margin-right: 159px;
+	font-size: 36px;
 	font-weight: bold;
 	color: $color1;
 	letter-spacing: 0.72;
+	z-index: 1;
+
+	@include md {
+		margin-right: 0;
+		z-index: 5;
+	}
+
+	@include xl {
+		font-size: 50px;
+	}
 }

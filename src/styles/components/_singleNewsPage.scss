@@ -1,30 +1,26 @@
 .singleNewsSection {
-	display: flex;
-	width: 100%;
 	background-color: $color6;
 }
 
 .singleNews {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	margin: 70px auto;
-	min-height: 100vh;
-	width: 80%;
 	background-color: $color1;
-	text-align: center;
 	box-shadow: $box-shadow;
-	position: relative;
-	&__title {
-		width: 50%;
-		margin: 25px 0;
 
+	@include sm {
+		width: 100%;
+	}
+
+	&__title {
 		h1 {
-			font-size: 45px;
+			font-size: 43px;
 			font-weight: bold;
 			line-height: 1.2;
 			margin: 25px 0;
 			word-spacing: -2px;
+
+			@include sm {
+				font-size: 19px;
+			}
 		}
 
 		hr {
@@ -35,30 +31,32 @@
 	}
 
 	&__square {
-		margin-bottom: 15px;
 		width: 36px;
 		height: 36px;
 		background: $color4;
+
+		@include sm {
+			width: 25px;
+			height: 25px;
+		}
 	}
 
 	&__date {
-		margin-bottom: 15px;
-		text-align: left;
+		@include sm {
+			font-size: 13px;
+		}
 	}
 
 	&__img {
-		width: 80%;
 		box-shadow: $box-shadow;
-		margin-bottom: 75px;
+		
 	}
 
 	&__content {
-		width: 80%;
 		line-height: 1.3;
 		letter-spacing: 0.3px;
 		font-size: 20px;
 		text-align: left;
-		margin-bottom: 75px;
 
 		mark {
 			background-color: $color4;
@@ -68,23 +66,39 @@
 			font-weight: 700;
 			font-size: 40px;
 			margin-bottom: 25px;
+
+			@include sm {
+				font-size: 25px;
+			}
 		}
 
 		h3 {
 			font-weight: 700;
 			font-size: 35px;
 			margin: 30px 0;
+
+			@include sm {
+				font-size: 20px;
+			}
 		}
 
 		h4 {
 			font-weight: 700;
 			font-size: 30px;
 			margin: 30px 0;
+
+			@include sm {
+				font-size: 18px;
+			}
 		}
 
 		p {
 			font-size: 20px;
 			margin: 20px 0;
+
+			@include sm {
+				font-size: 15px;
+			}
 		}
 
 		ul {
@@ -92,6 +106,10 @@
 			list-style-position: inside;
 			margin: 20px 0;
 			font-size: 18px;
+
+			@include sm {
+				font-size: 15px;
+			}
 		}
 
 		li {
@@ -108,6 +126,10 @@
 
 		pre {
 			margin: 15px 0;
+			white-space: pre-wrap;
+			@include sm {
+				font-size: 15px;
+			}
 		}
 	}
 }

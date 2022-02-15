@@ -4,16 +4,29 @@
 
 	i {
 		background: $color1;
-		width: 122px;
+		width: 120px;
 		height: 93px;
 		line-height: 91px;
 		color: $color2;
 		text-align: center;
 		font-size: 42px;
-
 		background-size: 200% 100%;
 		background-image: linear-gradient(to left, $color2 50%, $color1 50%);
 		transition: background-position 0.3s ease-out;
+
+		@include sm {
+			font-size: 20px;
+			width: 66px;
+			height: 66px;
+			line-height: 66px;
+		}
+
+		@include md {
+			font-size: 20px;
+			width: 77px;
+			height: 77px;
+			line-height: 77px;
+		}
 
 		&:hover {
 			background-position: -100% 0;

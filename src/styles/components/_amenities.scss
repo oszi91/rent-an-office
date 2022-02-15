@@ -1,20 +1,68 @@
 .amenities {
 	position: relative;
 	margin-bottom: 45px;
+	white-space: pre-line;
+
+	@include sm {
+		margin-bottom: 80px;
+	}
+
+	@include md {
+		margin-bottom: 120px;
+	}
+
+	@include lg {
+		margin-bottom: 100px;
+	}
+
+	@include xl {
+		margin-bottom: 150px;
+	}
 
 	&__container {
-		width: 235px;
-
 		h1 {
 			font-size: 36px;
-			line-height: 45px;
+			line-height: 46px;
 			font-weight: bold;
+			letter-spacing: -0.4px;
+
+			@include sm {
+				font-size: 20px;
+				line-height: 25px;
+				letter-spacing: 0;
+			}
+
+			@include md {
+				font-size: 30px;
+				line-height: 40px;
+			}
+
+			@include lg {
+				font-size: 32px;
+				line-height: 42px;
+			}
 		}
 
 		hr {
-			margin: 85px 0 7px 0px;
+			margin-top: 81px;
 			width: 102px;
-			border-top: 7px solid $color2;
+			border-top: 8px solid $color2;
+
+			@include sm {
+				margin-top: 10px;
+				border-top: 6px solid $color2;
+				width: 70%;
+			}
+
+			@include md {
+				margin-top: 40px;
+				width: 70%;
+			}
+
+			@include lg {
+				margin-top: 40px;
+				width: 70%;
+			}
 		}
 	}
 
@@ -23,25 +71,127 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 
+		@include sm {
+			align-items: center;
+			gap: 35px;
+		}
+
+		@include md {
+			align-items: flex-start;
+			gap: 25px;
+
+			&:after {
+				content: '';
+				flex: auto;
+			}
+		}
+
+		@include lg {
+			align-items: flex-start;
+			gap: 35px;
+		}
+
+		@include xl {
+			align-items: flex-start;
+			gap: 45px;
+		}
+
+		&__list--header {
+			white-space: pre-line;
+		}
+
 		&__item:nth-child(2),
 		&__item:nth-child(3),
 		&__item:nth-child(4) {
-			margin-top: 88px;
+			margin-top: 86px;
+
+			@include sm {
+				margin-top: 0;
+			}
+
+			@include md {
+				margin-top: 0;
+			}
+
+			@include lg {
+				margin-top: 43px;
+			}
+
+			@include xl {
+				margin-top: 43px;
+			}
+		}
+
+		&__item:nth-child(5),
+		&__item:nth-child(6),
+		&__item:nth-child(7),
+		&__item:nth-child(8) {
+			.amenities__list__item__container {
+				&__desc {
+					margin-top: 26px;
+				}
+			}
 		}
 
 		&__item {
 			width: 252px;
 			height: 289px;
 
+			@include sm {
+				width: calc(50% - 35px);
+				height: 150px;
+			}
+
+			@include md {
+				width: 30%;
+				height: auto;
+			}
+
+			@include lg {
+				width: 22%;
+				height: auto;
+			}
+
+			@include xl {
+				width: 22%;
+				height: auto;
+			}
+
 			&__container {
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+
 				&__img {
-					margin-bottom: 36px;
 					width: auto;
-					height: 92px;
+					height: 95px;
+
+					@include sm {
+						height: 60px;
+					}
 				}
 
 				&__desc {
-					font-size: 20px;
+					text-align: justify;
+					white-space: pre-line;
+					margin-top: 36px;
+					font-size: 21px;
+					line-height: 30px;
+
+					@include sm {
+						margin-top: 20px;
+						font-size: 12px;
+						line-height: 20px;
+					}
+
+					@include md {
+						margin-top: 25px;
+						font-size: 18px;
+					}
+
+					@include lg {
+						font-size: 18px;
+					}
 				}
 			}
 		}
@@ -51,12 +201,40 @@
 .amenities__showMore {
 	display: flex;
 	position: absolute;
-	bottom: -74px;
+	bottom: -80px;
 	width: 100%;
+
+	@include sm {
+		bottom: -110px;
+	}
+
+	@include md {
+		bottom: -145px;
+	}
+
+	@include lg {
+		bottom: -125px;
+	}
+
+	@include xl {
+		bottom: -170px;
+	}
 
 	.button {
 		line-height: 64px;
 		width: 240px;
+
+		@include sm {
+			width: 75%;
+			max-width: 250px;
+			height: 50px;
+			line-height: 50px;
+		}
+
+		@include xl {
+			width: 350px;
+			font-size: 17px;
+		}
 	}
 
 	.arrow {
@@ -68,6 +246,13 @@
 			line-height: 64px;
 			width: 62px;
 			font-size: 27px;
+
+			@include sm {
+				height: 50px;
+				width: 50px;
+				line-height: 50px;
+				font-size: 20px;
+			}
 		}
 	}
 }

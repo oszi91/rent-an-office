@@ -11,7 +11,7 @@ const Amenities = () => {
 	return (
 		<section className="amenities">
 			<ul className="amenities__list">
-				<AmenitiesHeader>Lorem ipsum dolor sit amet, conse</AmenitiesHeader>
+				<AmenitiesHeader>{`Lorem\n ipsum dolor\n sit amet,\n conse`}</AmenitiesHeader>
 				{amenitiesList.map(a => (
 					<AmenitiesItem key={a.img} {...a} />
 				))}

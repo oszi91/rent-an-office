@@ -1,12 +1,28 @@
 .newsSection {
 	background: $color6;
-	padding: 136px 0px 116px;
+	padding: 200px 0px 116px;
+
+	@include sm {
+		padding: 125px 0 150px;
+	}
+
+	@include md {
+		padding: 120px 0 150px;
+	}
 
 	&__header {
 		font-size: 52px;
-		font-weight: bold;
+		font-weight: 600;
 		line-height: 19px;
 		text-align: center;
+
+		@include sm {
+			font-size: 40px;
+		}
+
+		@include xl {
+			font-size: 60px;
+		}
 	}
 }
 
@@ -16,27 +32,81 @@
 	justify-content: space-between;
 	width: 100%;
 
+	@include sm {
+		padding-top: 70px;
+		flex-direction: column;
+		row-gap: 30px;
+	}
+
+	@include md {
+		padding-top: 80px;
+		row-gap: 30px;
+	}
+
+	@include lg {
+		padding-top: 80px;
+		row-gap: 30px;
+	}
+
 	&__item {
-		width: 372px;
+		width: 360px;
 		display: flex;
 		flex-direction: column;
 
+		@include sm {
+			width: 100%;
+		}
+
+		@include md {
+			width: 30%;
+		}
+
+		@include lg {
+			width: 30%;
+		}
+
+		@include xl {
+			width: 30%;
+		}
+
 		&__img {
 			height: 268px;
-			margin-bottom: 30px;
+			margin-bottom: 28px;
 			object-fit: cover;
+
+			@include md {
+				height: 230px;
+			}
 		}
 
 		&__date {
-			font-size: 15px;
+			font-size: 14px;
 			margin-bottom: 15px;
+
+			@include md {
+				margin-bottom: 10px;
+			}
+
+			@include xl {
+				font-size: 18px;
+			}
 		}
 
 		&__title {
 			font-size: 20px;
 			font-weight: bold;
-			line-height: 28px;
-			margin-bottom: 32px;
+			line-height: 32px;
+			margin-bottom: 25px;
+
+			@include md {
+				font-size: 17px;
+				line-height: 30px;
+				margin-bottom: 20px;
+			}
+
+			@include xl {
+				font-size: 22px;
+			}
 		}
 
 		&__link {
@@ -44,6 +114,10 @@
 			text-decoration: underline;
 			font-weight: medium;
 			font-size: 12px;
+
+			@include xl {
+				font-size: 15px;
+			}
 		}
 	}
 }

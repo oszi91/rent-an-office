@@ -1,8 +1,5 @@
 import React from 'react';
 
-import logo from './../../../images/footer/logo.png';
-import deco from './../../../images/footer/1.png';
-
 import Container from './../Container';
 import Logo from '../Logo';
 
@@ -41,10 +38,14 @@ const Footer = () => {
 						<p className="footer__more__privacy">Polityka prywatności</p>
 						<div className="footer__more__copyright">
 							<p>Proudly designed by</p>
-							<img src={logo} alt="logo" />
+							<img src="footer/logo.png" alt="logo" />
 						</div>
 					</div>
-					<img className="footer__decoration__img" src={deco} alt="" />
+					<img
+						className="footer__decoration__img"
+						src="footer/1.png"
+						alt=""
+					/>
 				</footer>
 			</Container>
 		</section>

@@ -9,10 +9,10 @@ const list = [
 	{ title: 'Kontakt', link: '/' },
 ];
 
-const Nav = () => {
+const Nav = ({ onClick }) => {
 	const menu = list.map(item => {
 		return (
-			<li className="nav__list__item" key={item.title}>
+			<li className="nav__list__item" key={item.title} onClick={onClick}>
 				<Link className="link" to={item.link}>
 					{item.title}
 				</Link>

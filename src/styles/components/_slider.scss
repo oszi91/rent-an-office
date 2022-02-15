@@ -16,11 +16,14 @@
 	top: 0;
 	left: 0;
 
+	@include sm {
+		z-index: 2;
+	}
+
 	&__container {
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		z-index: 2;
 		display: flex;
 		align-items: center;
 	}
@@ -28,6 +31,12 @@
 	&__background {
 		height: 753px;
 		filter: brightness(0.63);
+
+		@include sm {
+			height: 500px;
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 }
 
@@ -40,17 +49,25 @@
 	&__slideNum {
 		font-size: 13px;
 		font-weight: bold;
+
+		@include sm {
+			font-size: 11px;
+		}
 	}
 
 	&__wrapper {
 		width: 166px;
 		margin: 0 17px;
 
-		&__progressBar{
+		@include sm {
+			width: 80px;
+		}
+
+		&__progressBar {
 			width: 100%;
 			background-color: $color2;
 
-			&__fill{
+			&__fill {
 				display: block;
 				height: 5px;
 				background-color: $color1;

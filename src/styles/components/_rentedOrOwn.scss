@@ -1,28 +1,89 @@
 .rentedOrOwnSection {
 	background: $color6;
-	padding-top: 200px;
+	padding-top: 202px;
+	width: 100%;
+
+	@include sm {
+		padding-top: 150px;
+	}
+
+	@include md {
+		padding-top: 140px;
+	}
 
 	.rentedOrOwn {
-		margin-left: 140px;
 		display: flex;
 		position: relative;
-		height: 511px;
 		width: 100%;
 
-		&__img{
-			margin-left: 127px;
-			height: 511px;
+		&__img {
+			position: absolute;
+			right: 0;
+			width: 91%;
+			height: auto;
+
+			@include sm {
+				height: 250px;
+				width: auto;
+			}
+
+			@include md {
+				height: 400px;
+			}
 		}
 
 		&__container {
 			z-index: 1;
+			margin-top: 175px;
+
+			@include sm {
+				padding: 15px 15px 15px 0;
+				background: $color6;
+				margin-top: 86px;
+			}
+
+			@include md {
+				padding: 20px 30px 20px 0;
+				background: $color6;
+			}
+
+			@include lg {
+				margin-top: 150px;
+			}
+
 			h1 {
-				margin-top: 178px;
-				width: 388px;
+				white-space: pre-line;
 				font-size: 48px;
 				font-weight: bold;
-				line-height: 61px;
-				margin: 173px 0 135px;
+				line-height: 62px;
+				margin-bottom: 135px;
+				letter-spacing: 1px;
+
+				@include sm {
+					font-size: 22px;
+					letter-spacing: 0;
+					line-height: 25px;
+					margin-bottom: 15px;
+				}
+
+				@include md {
+					font-size: 32px;
+					line-height: 50px;
+					margin-bottom: 40px;
+					letter-spacing: 0;
+				}
+
+				@include lg {
+					font-size: 40px;
+					line-height: 56px;
+					margin-bottom: 35px;
+				}
+
+				@include xl {
+					font-size: 54px;
+					line-height: 80px;
+					margin-bottom: 190px;
+				}
 			}
 
 			hr {
@@ -30,15 +91,53 @@
 				z-index: 1;
 				width: 489px;
 				border-top: 18px solid $color2;
+
+				@include sm {
+					width: 200px;
+					border-top: 6px solid $color2;
+				}
+
+				@include md {
+					width: 105%;
+					border-top: 12px solid $color2;
+				}
+
+				@include lg {
+					width: 400px;
+					border-top: 16px solid $color2;
+				}
+
+				@include xl {
+					width: 550px;
+					border-top: 21px solid $color2;
+				}
 			}
 		}
+	}
+}
 
-		&__decoration {
-			width: auto;
-			height: 116px;
-			position: absolute;
-			top: -60px;
-			right: 250px;
-		}
+.rentedOrOwnSection__img {
+	width: 100%;
+	position: relative;
+}
+
+.rentedOrOwn__decoration {
+	width: 231px;
+	height: 117px;
+	position: absolute;
+	right: 0;
+	top: -54px;
+	z-index: 1;
+
+	@include sm {
+		width: 100px;
+		height: 50px;
+		top: -25px;
+	}
+
+	@include md {
+		width: 150px;
+		height: 80px;
+		top: -40px;
 	}
 }

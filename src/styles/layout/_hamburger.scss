@@ -1,0 +1,33 @@
+@include sm {
+	.hamburgerIcon {
+		width: 25px;
+		z-index: 2;
+	}
+
+	.hamburgerIcon:after,
+	.hamburgerIcon:before,
+	.hamburgerIcon div {
+		background-color: $color1;
+		content: '';
+		display: block;
+		height: 3px;
+		margin: 4px 0;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.hamburgerActive {
+		background: none;
+	}
+
+	.hamburgerActive .hamburgerIcon::before {
+		transform: translateY(7px) rotate(135deg);
+	}
+
+	.hamburgerActive .hamburgerIcon::after {
+		transform: translateY(-7px) rotate(-135deg);
+	}
+
+	.hamburgerActive .hamburgerIcon div {
+		transform: scale(0);
+	}
+}

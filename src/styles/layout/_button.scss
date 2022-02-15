@@ -14,6 +14,19 @@
 	background-image: linear-gradient(to left, $color4 50%, $color2 50%);
 	transition: background-position 0.3s ease-out;
 
+	@include sm {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	@include md {
+		width: 100%;
+	}
+
+	@include xl {
+		width: 100%;
+	}
+
 	&:hover {
 		background-position: -100% 0;
 		color: $color2;

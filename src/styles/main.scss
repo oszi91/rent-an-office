@@ -1,4 +1,8 @@
+@import '../../node_modules/bootstrap/scss/bootstrap-grid';
+@import '../../node_modules/bootstrap/scss/bootstrap-utilities';
+
 @import './settings/reset';
+@import './settings/mixins';
 @import './settings/colors';
 @import './settings/fonts';
 @import './settings/base';
@@ -17,6 +21,6 @@
 
 @import './layout/arrow';
 @import './layout/button';
+@import './layout/hamburger';
 @import './layout/logo';
-
-
+@import './layout/message';
