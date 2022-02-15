@@ -1,6 +1,6 @@
 # Rent An Office - Live Demo
 
-[Rent An Office - Live Demo](https://rent-an-office.netlify.app/)
+[Rent An Office - Live Demo](http://rent-an-office.netlify.app/)
 
 ## Technologies:
 
